@@ -10,15 +10,15 @@ import{Search} from '../search';
 export class SearchComponent implements OnInit {
 
   searches:Search[];
-  constructor(public httpservice:HttpServiceService) {}
+  constructor(public httpService:HttpServiceService) {}
 
   ngOnInit() {
   }
 
-  searchGiphy(searchTerm){
-    this.giphyHttpService.searchGiphies(searchTerm).then(
+  searchUser(searchTerm){
+    this.httpService.searchUser(searchTerm).then(
       ()=>{
-        this.giphies=this.giphyHttpService.giphies;
+        this.searches=this.httpService.searches;
       },
       (error)=>{
         console.log(error)
