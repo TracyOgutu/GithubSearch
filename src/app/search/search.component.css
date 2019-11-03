@@ -1,0 +1,14 @@
+label{
+    cursor: pointer;
+}
+.panel{
+    cursor: pointer;
+}
+#date{
+    cursor: pointer;
+}
+
+body{
+    background-image: url(/src/assets/Telegram.jpg);
+    background-size: cover;
+}

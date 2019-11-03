@@ -1,4 +1,7 @@
 import { Component, OnInit ,Output,EventEmitter} from '@angular/core';
+import {HttpServiceService} from '../http-service.service';
+import{User} from '../user';
+import{Repository} from '../repository';
 
 @Component({
   selector: 'app-search-form',
@@ -7,16 +10,18 @@ import { Component, OnInit ,Output,EventEmitter} from '@angular/core';
 })
 export class SearchFormComponent implements OnInit {
 
-  @Output() emitSearch = new EventEmitter<any>()
-  
+  user:User;
+  repo:Repository;
+  username:string;
   searchTerm:string;
-  constructor() { }
 
-  search(){
-    this.emitSearch.emit(this.searchTerm);
-  }
+  constructor(private httpService:HttpServiceService) { }
 
-  
+  getDetail2(){
+    this.httpService.updateProfile(this.username);
+    this.httpService.searchRepository();
+    this.repo=this.httpService.repo
+    }
   ngOnInit() {
   }
 

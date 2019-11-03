@@ -1,5 +1,5 @@
 
-<div class = "container">
+<!-- <div class = "container">
     <ng-progress></ng-progress>
     
 
@@ -9,10 +9,65 @@
             <div *ngFor="let search of searches">
                 <div class="card">
 
-                    <!-- <img src="{{giphy.url}}" class="card-img"> -->
+                    <img src="{{giphy.url}}" class="card-img"> 
 
                 </div>
             </div>
         </div>
     </div>
-</div>
+</div> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form (ngSubmit)='getDetail()' #userForm='ngForm'>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter Github Username"
+             [(ngModel)]="username"
+                name="username" (keyup)="getDetail()">
+        </div>
+    </form>
+    
+    <div class="row">
+        <div class="avatar">
+            <img src="{{user.avatar_url}}" class="avatarimg">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+               
+                <label for="followers" appMouseover>Number of Followers:{{user.followers}}</label><br>
+                <label for="following"appMouseover>Number Followed:{{user.following}}</label>
+                <div class="panel" appMouseover>Location:{{user.location}}</div>
+            <div class="panel"appMouseover>Github Username:{{user.name}}</div>
+            
+           
+        </div>
+        <div class="col-sm-6">
+                <div class="panel" appMouseover>User Bio:{{user.bio}}</div>
+               
+                <div class="panel"><a href="{{user.url}}" appMouseover>Github Url:{{user.url}}</a></div>
+            <div class="label label-default" id ="date" appMouseover>This account was created on {{user.creation|date}}</div>
+    
+        </div>
+    
+        <div class="row" *ngFor="let repo of Repos let i=index">
+            <p>Name of repository:{{repo?.name}}</p>
+            <p><a href="{{repos?.html_url}}" class="btn btn-sm btn-success pull-right">View this Repo</a></p>
+            <p>Repo Description:{{repo?.description}}</p>
+    
+        </div>
+    </div>
+
+    <app-search-form></app-search-form>
+
+</body>
+</html>
+
+     
+    

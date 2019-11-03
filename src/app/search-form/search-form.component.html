@@ -1,11 +1,21 @@
 
-<div style="margin: 20px">
+<!-- <div style="margin: 20px">
     <div class="card">
         <div class="card-body">
             <form class="form-inline">
                 <input type="text" class="form-control mr-10" placeholder="Github Username" name="searchTerm" [(ngModel)]="searchTerm">
                 <button type="submit" class="btn btn-dark" (click)="search()">Search</button>
+
             </form>
         </div>
     </div>
-</div>
+</div> -->
+
+<form (ngSubmit)='getDetail2()' #userForm='ngForm'>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Enter Repository name"
+         [(ngModel)]="userrepo"
+            name="repo" (keyup)="getDetail2()">
+            <p>{{repos?.html_url}}</p>
+    </div>
+</form> 

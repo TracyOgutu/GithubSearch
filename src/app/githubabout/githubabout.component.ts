@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpServiceService} from '../http-service.service';
 
 @Component({
   selector: 'app-githubabout',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GithubaboutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpService:HttpServiceService) { }
 
   ngOnInit() {
+    this.httpService.searchUser();
   }
 
 }

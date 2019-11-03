@@ -11,6 +11,8 @@ import { SearchComponent } from './search/search.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { GithubaboutComponent } from './githubabout/githubabout.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { MouseoverDirective } from './mouseover.directive';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     SearchComponent,
     SearchFormComponent,
     GithubaboutComponent,
-    NavbarComponent
+    NavbarComponent,
+    MouseoverDirective,
+    
   ],
   imports: [
     BrowserModule,
