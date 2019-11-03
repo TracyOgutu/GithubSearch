@@ -16,17 +16,11 @@ export class HttpServiceService {
   constructor(private http: HttpClient) {
     this.user = new User("", "", "", "", "", 0, 0, new Date());
     this.repo = new Repository("", "", "")
-    this.username = '';
+    this.username = " ";
   }
   searchUser() {
     interface ApiResponse {
-      avatar_url: string;
-      name: string;
-      url: string;
-      bio: string;
-      location: string;
-      followers: number;
-      following: number;
+      avatar_url: string;name: string;url: string;bio: string;location: string;followers: number;following: number;
       creation: Date;
     }
     let promise = new Promise((resolve, reject) => {
@@ -54,9 +48,7 @@ export class HttpServiceService {
 
   searchRepository() {
     interface ApiResponse {
-      name: string;
-      description: string;
-      html_url: string;
+      name: string;description: string;html_url: string;
     }
 
     let promise = new Promise((resolve, reject) => {
