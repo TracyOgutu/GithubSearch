@@ -1,0 +1,16 @@
+<p>search works!</p>
+<div>
+    <p>SEARCH</p>
+    <app-search-form (emitSearch)="searchUser($event)"></app-search-form>
+    <div *ngIf="searches">
+        <div class="card-columns">
+            <div *ngFor="let search of searches">
+                <div class="card">
+
+                    <!-- <img src="{{giphy.url}}" class="card-img"> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
