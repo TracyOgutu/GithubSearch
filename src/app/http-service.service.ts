@@ -13,7 +13,7 @@ export class HttpServiceService {
 
   searchUser(searchTerm:string){
     
-    let searchEndpoint= "https://api.giphy.com/v1/gifs/search?api_key="+environment.APIKEY;
+    let searchEndpoint= "https://api.github.com/search/users?q={query}{&page,per_page,sort,order}"+environment.APIKEY;
     searchEndpoint += "&q="+searchTerm;
     let promise =  new Promise((resolve, reject)=>{
         this.http.get(searchEndpoint).toPromise().then(

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpServiceService} from '../http-service.service';
 import{Search} from '../search';
+import{User} from '../user';
+import{HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-search',
@@ -10,9 +12,11 @@ import{Search} from '../search';
 export class SearchComponent implements OnInit {
 
   searches:Search[];
-  constructor(public httpService:HttpServiceService) {}
+  user:User;
+  constructor(public httpService:HttpServiceService, private http:HttpClient) {}
 
   ngOnInit() {
+    
   }
 
   searchUser(searchTerm){

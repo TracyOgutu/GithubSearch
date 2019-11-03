@@ -9,12 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { SearchFormComponent } from './search-form/search-form.component';
+import { GithubaboutComponent } from './githubabout/githubabout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    SearchFormComponent
+    SearchFormComponent,
+    GithubaboutComponent
   ],
   imports: [
     BrowserModule,
