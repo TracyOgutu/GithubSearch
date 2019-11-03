@@ -10,13 +10,15 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { GithubaboutComponent } from './githubabout/githubabout.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     SearchFormComponent,
-    GithubaboutComponent
+    GithubaboutComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
