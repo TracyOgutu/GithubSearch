@@ -37,8 +37,8 @@ export class HttpServiceService {
         resolve()
       },
         error => {
-          this.user.name = "Username could not be retrieved.Please try again"
-          this.user.bio="User bio not provided"
+          this.user.name = "Username could not be retrieved."
+          this.user.bio="User Bio not provided"
           reject(error)
         }
       )
@@ -60,7 +60,7 @@ export class HttpServiceService {
         resolve()
       },
         error => {
-          this.repo.name = "Repositories could not be retrieved. Please try again!"
+          this.repo.name = "Repositories could not be retrieved."
           reject(error)
         }
       )

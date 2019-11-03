@@ -7,8 +7,21 @@ label{
 #date{
     cursor: pointer;
 }
-
-.container-fluid{
-    background-image: url(/src/assets/Telegram.jpg) !important;
-    background-size: cover;
+html{
+    background-image: url(/src/assets/Telegram.jpg);  
 }
+.container-fluid{
+     
+     background-size: cover;
+    font-family: 'Courgette', cursive;
+    font-size:30px;
+    /* background-color:lightcoral; */
+    height:100%;
+    width:100%;
+    position: absolute; 
+}
+.avatar{
+    align-content:center;
+
+}
+

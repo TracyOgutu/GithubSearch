@@ -23,6 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Search</title>
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -54,7 +55,7 @@
                             <div class="panel" appMouseover>User Bio:{{user.bio}}</div>
                            
                             <div class="panel"><a href="{{user.url}}" appMouseover>Github Url:{{user.url}}</a></div>
-                        <div class="label label-default" id ="date" appMouseover>This account was created on {{user.creation|date}}</div>
+                        <div class="label label-default" id ="date" appMouseover>Date account was created: {{user.creation|date}}</div>
                 
                     </div>
                 
