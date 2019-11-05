@@ -1,14 +1,16 @@
-html * {
-    background-image: url(../../assets/Telegram.jpg);
+.container-fluid {
+    background-image: url(../../assets/gitback2.jpg);
     font-family: 'Courgette', cursive;
-    background-image: cover;
+    /* background-repeat: no-repeat; */
     height:100%;
     width:100%;
+    object-fit: cover;
     position: absolute;
     
 }
 
 #gitsearch{
-    
+    margin-top:200px;
     font-size:40px;
+    margin-left:300px;
 }

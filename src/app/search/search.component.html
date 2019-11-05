@@ -27,20 +27,20 @@
         </div>
         <h3 class="">User Repositories</h3>
         <div class="row">
-            <div class="card col-lg-5 ml-3 bg-secondary" *ngFor="let repo of repos">
+            <div class="card col-lg-5 ml-3 bg-info" *ngFor="let repo of repos">
                 <div class="row">
                         <p appHighlight *ngIf="repo.name.length > 10">Long repo name</p>
                                 <div class="col-md-9">
                                 <h3>{{repo.name}}</h3>
                                 <p>{{repo.description}}</p>
         
-                                <h4><a href="{{repo.html_url}}" target="_blank" class="btn btn-info">See on github</a>
+                                <h4><a href="{{repo.html_url}}" target="_blank" class="btn btn-danger">See on github</a>
                                 </h4>
                             </div>
         
                             <div class="col-md-3">
-                                <span class="btn btn-success">{{repo.watchers}} Number of Stars </span>
-                                <span class="btn btn-primary">{{repo.forks}} Number of Forks </span>
+                                <span class="btn btn-warning">{{repo.watchers}} Number of Stars </span>
+                                <span class="btn btn-success">{{repo.forks}} Number of Forks </span>
                             </div>
         
                         </div>
