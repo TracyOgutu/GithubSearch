@@ -57,14 +57,14 @@ export class HttpServiceService {
   return promise
 }
 
-getProfileInfo() {
+getUserDetails() {
   interface ApiResponse {
     login: string;
   }
   return this.http.get('https://api.github.com/users/' + this.username + '?client_id=' + this.clientid + '&client_secret=' + this.clientsecret)
 }
 
-getProfileRepos() {
+getUserRepos() {
   return this.http.get('https://api.github.com/users/' + this.username + '/repos?client_id=' + this.clientid + '&client_secret=' + this.clientsecret)
 }
 
