@@ -11,14 +11,10 @@ This project is an angular application that allows a user to access their github
  * _A user input form_
  * _A display of github details such as:_
 
-    * _Github url_
+    * _Github repositories_
 
-    * _Number of followers_
+    * _Date of account creation_
 
-    * _Location_
-
-    * _Github Bio_
-    
 
 ## PROJECT SET UP INSTRUCTIONS
 
