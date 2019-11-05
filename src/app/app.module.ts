@@ -8,7 +8,6 @@ import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
-import { SearchFormComponent } from './search-form/search-form.component';
 import { GithubaboutComponent } from './githubabout/githubabout.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MouseoverDirective } from './mouseover.directive';
@@ -19,7 +18,6 @@ import { DateDisplayPipe } from './date-display.pipe';
   declarations: [
     AppComponent,
     SearchComponent,
-    SearchFormComponent,
     GithubaboutComponent,
     NavbarComponent,
     MouseoverDirective,
