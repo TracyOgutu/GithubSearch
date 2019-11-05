@@ -12,7 +12,7 @@ label{
 } */
 
 .container-fluid{
-    background-image: url(../../assets/Telegram.jpg);
+   
     background-size: cover;
     font-family: 'Courgette', cursive;
     font-size:30px;
@@ -21,12 +21,13 @@ label{
     width:100%;
     position: absolute; 
 }
+
 #userbios{
     
      background-size: cover;
     font-family: 'Courgette', cursive;
     font-size:30px;
-    /* background-color:lightcoral; */
+    background-color:lightcoral; 
     height:100%;
     width:100%;
     position: absolute; 
