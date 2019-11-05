@@ -15,7 +15,7 @@
 
     <form (ngSubmit)='userDetails()' #searchForm='ngForm'>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="search  git users with username" [(ngModel)]="username"
+                <input type="text" class="form-control" placeholder="Enter github username" [(ngModel)]="username"
                     name="username" (keyup)="userDetails()">
             </div>
         </form>
