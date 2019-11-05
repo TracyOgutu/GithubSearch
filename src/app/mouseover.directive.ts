@@ -8,7 +8,7 @@ export class MouseoverDirective {
   constructor(private el: ElementRef) { }
 
   @HostListener('mouseenter') onMouseEnter() {
-    this.highlight('yellow');
+    this.highlight('green');
   }
 
   @HostListener('mouseleave') onMouseLeave() {

@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Search</title>
     <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -15,8 +16,8 @@
 
     <form (ngSubmit)='userDetails()' #searchForm='ngForm'>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Enter github username" [(ngModel)]="username"
-                    name="username" (keyup)="userDetails()">
+                <input type="text" class="form-control" placeholder="Enter Github Username" [(ngModel)]="username"
+                    name="username" (keyup)="userDetails()" id="entergit">
             </div>
         </form>
         <div class="row">
@@ -25,13 +26,13 @@
                 <p class="text-center" >Created:{{user.creation|dateDisplay }} days ago</p>
             </div>
         </div>
-        <h3 class="">User Repositories</h3>
-        <div class="row">
+        <div class="row" id="repotag" appMouseover>User Repositories</div>
+        <div class="row" id ="reporow">
             <div class="card col-lg-5 ml-3 bg-info" *ngFor="let repo of repos">
                 <div class="row">
-                        <p appHighlight *ngIf="repo.name.length > 10">Long repo name</p>
+                        <!-- <p  *ngIf="repo.name.length > 10">Long repo name</p> -->
                                 <div class="col-md-9">
-                                <h3>{{repo.name}}</h3>
+                                <h3 id ="reponame" appMouseover>{{repo.name}}</h3>
                                 <p>{{repo.description}}</p>
         
                                 <h4><a href="{{repo.html_url}}" target="_blank" class="btn btn-danger">See on github</a>
