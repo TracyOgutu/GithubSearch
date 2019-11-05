@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'search', component: SearchComponent},
   { path: 'about', component: GithubaboutComponent},
   { path: '', redirectTo:"/search", pathMatch:"full"},
-  { path:'**', component:NotfoundcomponentComponent},
+ 
 ];
 
 @NgModule({
