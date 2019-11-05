@@ -10,6 +10,8 @@ import{Repository} from '../repository';
 })
 export class SearchFormComponent implements OnInit {
 
+
+  @Output() searchRepo = new EventEmitter<any>();
   user:User;
   repo:Repository;
   username:string;
@@ -17,11 +19,9 @@ export class SearchFormComponent implements OnInit {
 
   constructor(private httpService:HttpServiceService) { }
 
-  getDetail2(){
-    this.httpService.updateProfile(this.username);
-    this.httpService.searchRepository();
-    this.repo=this.httpService.repo
-    }
+  getRepo(reposearch:any){
+    this.searchRepo.emit(reposearch);
+  }
   ngOnInit() {
   }
 

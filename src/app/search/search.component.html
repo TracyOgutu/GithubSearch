@@ -27,7 +27,7 @@
 </head>
 <body>
 
-    <div class = "container-fluid"> 
+    <!-- <div class = "container-fluid" > 
             <form (ngSubmit)='getDetail()' #userForm='ngForm'>
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Enter Github Username"
@@ -35,41 +35,83 @@
                             name="username" (keyup)="getDetail()">
                     </div>
                 </form><br>
-                
-                <div class="row">
-                    <div class="avatar">
-                        <img src="{{user.avatar_url}}" class="avatarimg">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">
-                           
-                            <label for="followers" appMouseover>Number of Followers:{{user.followers}}</label><br>
-                            <label for="following"appMouseover>Number Followed:{{user.following}}</label>
-                            <div class="panel" appMouseover>Location:{{user.location}}</div>
-                        <div class="panel"appMouseover>Github Username:{{user.name}}</div>
+                <div id ="userbios">
+                        <div class="row">
+                                <div class="avatar">
+                                    <img src="{{user.avatar_url}}" class="avatarimg">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                       
+                                        <label for="followers" appMouseover>Number of Followers:{{user.followers}}</label><br>
+                                        <label for="following"appMouseover>Number Followed:{{user.following}}</label>
+                                        <div class="panel" appMouseover>Location:{{user.location}}</div>
+                                    <div class="panel"appMouseover>Github Username:{{user.name}}</div>
+                                    
+                                   
+                                </div>
+                                <div class="col-sm-6">
+            
+                                        <div class="panel" appMouseover>User Bio:{{user.bio}}</div>
+                                       
+                                        <div class="panel"><a href="{{user.url}}" appMouseover>Github Url:{{user.url}}</a></div>
+            
+                                        <div class="panel">Name of repository {{repo.html_url}}</div>
+                                    <div class="label label-default" id ="date" appMouseover>Date account was created:
+                                         {{user.creation|date}}</div>
+                            
+                                </div>
+                            
+                                <div *ngFor="let repo of repos; let i=index">
+                                    <div *ngFor = 'let rep of repo'>
+                                        <p>Name of repository:{{repo.name}}</p>
+                                        <p><a href="{{repos.html_url}}" class="btn btn-sm btn-success pull-right">View this Repo</a></p>
+                                        <p>Repo Description:{{repo.description}}</p>
+                                    </div>
+                                </div>
+                            </div><br>
                         
-                       
-                    </div>
-                    <div class="col-sm-6">
-                            <div class="panel" appMouseover>User Bio:{{user.bio}}</div>
-                           
-                            <div class="panel"><a href="{{user.url}}" appMouseover>Github Url:{{user.url}}</a></div>
-                        <div class="label label-default" id ="date" appMouseover>Date account was created: {{user.creation|date}}</div>
-                
-                    </div>
-                
-                    <div class="row" *ngFor="let repo of Repos let i=index">
-                        <p>Name of repository:{{repo?.name}}</p>
-                        <p><a href="{{repos?.html_url}}" class="btn btn-sm btn-success pull-right">View this Repo</a></p>
-                        <p>Repo Description:{{repo?.description}}</p>
-                
-                    </div>
-                </div><br>
+                </div>
+               
+                 <app-search-form (searchRepo)='getDetail2($event)' ></app-search-form><br> 
             
-                <!-- <app-search-form></app-search-form><br> -->
-            
-    </div>
+    </div> -->
+
+    <form (ngSubmit)='userDetails()' #searchForm='ngForm'>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="search  git users with username" [(ngModel)]="username"
+                    name="username" (keyup)="userDetails()">
+            </div>
+        </form>
+        <div class="row">
+            <div class="avatar">
+                <img class="circle-image" src="{{profile.avatar_url}}"  alt="Profile Image">
+                <p class="text-center" >Created:{{user.creation|dateDisplay }} days ago</p>
+            </div>
+        </div>
+        <h3 class="">User Repositories</h3>
+        <div class="row">
+            <div class="card col-lg-5 ml-3 bg-secondary" *ngFor="let repo of repos">
+                <div class="row">
+                        <p appHighlight *ngIf="repo.name.length > 10">Long repo name</p>
+                                <div class="col-md-9">
+                                <h3>{{repo.name}}</h3>
+                                <p>{{repo.description}}</p>
+        
+                                <h4><a href="{{repo.html_url}}" target="_blank" class="btn btn-info">See on github</a>
+                                </h4>
+                            </div>
+        
+                            <div class="col-md-3">
+                                <span class="btn btn-success">{{repo.watchers}} Number of Stars </span>
+                                <span class="btn btn-primary">{{repo.forks}} Number of Forks </span>
+                            </div>
+        
+                        </div>
+                        <hr>
+                    </div>
+        </div>
     
 </body>
 </html>

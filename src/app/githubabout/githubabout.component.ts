@@ -11,7 +11,7 @@ export class GithubaboutComponent implements OnInit {
   constructor(private httpService:HttpServiceService) { }
 
   ngOnInit() {
-    this.httpService.searchUser();
+    
   }
 
 }

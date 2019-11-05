@@ -1,5 +1,14 @@
 html * {
-    background-image: url(/src/assets/Telegram.jpg);
+    background-image: url(../../assets/Telegram.jpg);
     font-family: 'Courgette', cursive;
+    background-image: cover;
+    height:100%;
+    width:100%;
+    position: absolute;
     
+}
+
+#gitsearch{
+    
+    font-size:40px;
 }

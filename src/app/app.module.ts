@@ -12,6 +12,7 @@ import { SearchFormComponent } from './search-form/search-form.component';
 import { GithubaboutComponent } from './githubabout/githubabout.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MouseoverDirective } from './mouseover.directive';
+import { DateDisplayPipe } from './date-display.pipe';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { MouseoverDirective } from './mouseover.directive';
     GithubaboutComponent,
     NavbarComponent,
     MouseoverDirective,
+    DateDisplayPipe,
     
   ],
   imports: [

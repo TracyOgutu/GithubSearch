@@ -11,11 +11,11 @@
     </div>
 </div> -->
 
-<form (ngSubmit)='getDetail2()' #userForm='ngForm'>
+<form (ngSubmit)='getRepo()' #userForm='ngForm'>
     <div class="form-group">
         <input type="text" class="form-control" placeholder="Enter Repository name"
          [(ngModel)]="userrepo"
-            name="repo" (keyup)="getDetail2()">
+            name="repo" (keyup)="getRepo()">
             <p>{{repos?.html_url}}</p>
     </div>
 </form> 
