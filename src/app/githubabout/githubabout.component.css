@@ -1,5 +1,5 @@
 .container-fluid {
-    background-image: url(../../assets/gitback2.jpg);
+    background-image: url(../../assets/gitback4.jpg);
     font-family: 'Courgette', cursive;
     /* background-repeat: no-repeat; */
     height:100%;
@@ -12,5 +12,5 @@
 #gitsearch{
     margin-top:200px;
     font-size:40px;
-    margin-left:300px;
+    margin-left:30px;
 }
