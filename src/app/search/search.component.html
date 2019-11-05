@@ -1,21 +1,5 @@
 
-<!-- <div class = "container">
-    <ng-progress></ng-progress>
-    
 
-    <app-search-form (emitSearch)="searchUser($event)"></app-search-form>
-    <div *ngIf="searches">
-        <div class="card-columns">
-            <div *ngFor="let search of searches">
-                <div class="card">
-
-                    <img src="{{giphy.url}}" class="card-img"> 
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,56 +11,7 @@
 </head>
 <body>
 
-    <!-- <div class = "container-fluid" > 
-            <form (ngSubmit)='getDetail()' #userForm='ngForm'>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Enter Github Username"
-                         [(ngModel)]="username"
-                            name="username" (keyup)="getDetail()">
-                    </div>
-                </form><br>
-                <div id ="userbios">
-                        <div class="row">
-                                <div class="avatar">
-                                    <img src="{{user.avatar_url}}" class="avatarimg">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                       
-                                        <label for="followers" appMouseover>Number of Followers:{{user.followers}}</label><br>
-                                        <label for="following"appMouseover>Number Followed:{{user.following}}</label>
-                                        <div class="panel" appMouseover>Location:{{user.location}}</div>
-                                    <div class="panel"appMouseover>Github Username:{{user.name}}</div>
-                                    
-                                   
-                                </div>
-                                <div class="col-sm-6">
-            
-                                        <div class="panel" appMouseover>User Bio:{{user.bio}}</div>
-                                       
-                                        <div class="panel"><a href="{{user.url}}" appMouseover>Github Url:{{user.url}}</a></div>
-            
-                                        <div class="panel">Name of repository {{repo.html_url}}</div>
-                                    <div class="label label-default" id ="date" appMouseover>Date account was created:
-                                         {{user.creation|date}}</div>
-                            
-                                </div>
-                            
-                                <div *ngFor="let repo of repos; let i=index">
-                                    <div *ngFor = 'let rep of repo'>
-                                        <p>Name of repository:{{repo.name}}</p>
-                                        <p><a href="{{repos.html_url}}" class="btn btn-sm btn-success pull-right">View this Repo</a></p>
-                                        <p>Repo Description:{{repo.description}}</p>
-                                    </div>
-                                </div>
-                            </div><br>
-                        
-                </div>
-               
-                 <app-search-form (searchRepo)='getDetail2($event)' ></app-search-form><br> 
-            
-    </div> -->
+    
 
     <form (ngSubmit)='userDetails()' #searchForm='ngForm'>
             <div class="form-group">

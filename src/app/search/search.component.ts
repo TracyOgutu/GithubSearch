@@ -82,14 +82,5 @@ export class SearchComponent implements OnInit {
     
   }
 
-  // searchUser(searchTerm){
-  //   this.httpService.searchUser(searchTerm).then(
-  //     ()=>{
-  //       this.searches=this.httpService.searches;
-  //     },
-  //     (error)=>{
-  //       console.log(error)
-  //     }
-  //   )
-  //   }
+  
 }
